@@ -20,7 +20,7 @@ const App = () => {
   return (
     // [1] Create a context provider with the initial state 
     <AppContext.Provider value={initialState}>
-      <BrowserRouter>
+      <BrowserRouter basename='/react-shop'>
         {/* <Layout> */}
         <Routes>
           <Route element={<Layout />} >
