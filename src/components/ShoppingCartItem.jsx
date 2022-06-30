@@ -1,17 +1,16 @@
 import React from 'react';
-import '../styles/ShoppingCartItem.scss';
+import '@styles/ShoppingCartItem.scss';
 
 import close from '@icons/icon_close.png';
 
-const ShoppingCartItem = () => {
+const ShoppingCartItem = ({ product }) => {
     return (
         <div className="ShoppingCartItem">
             <figure>
-                <img src="https://images.pexels.com/photos/6802843/pexels-photo-6802843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="bike" />
+                <img src={product.images[0]} alt={product.title} />
             </figure>
-            <p>Bike</p>
-            <p>$ 30.00</p>
+            <p>{product.title}</p>
+            <p>${product.price}</p>
             <img src={close} alt="close" />
         </div>
     );
