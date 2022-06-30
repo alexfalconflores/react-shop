@@ -3,14 +3,25 @@
 .ShoppingCart {
     position: absolute;
     width: 360px;
-    padding: 24px;
+    height: 94vh;
+    padding: 0 24px;
     right: 0;
     box-sizing: border-box;
+    background-color: var(--white);
+    top: 60px;
+    overflow-y: auto;
+    border-radius: 6px;
+    border: 1px solid var(--very-light-pink);
+    animation: swipeLeft 0.26s ease;
 }
 
 .title-container {
+    padding-top: 24px;
     display: flex;
     align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: var(--white);
 }
 
 .title-container img {
@@ -26,6 +37,16 @@
 .my-order-content {
     display: flex;
     flex-direction: column;
+}
+
+.order-container{
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    background-color: var(--white);
 }
 
 .order {
@@ -66,6 +87,15 @@
     font-weight: bold;
     height: 50px;
 }
+
+@keyframes swipeLeft {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 360px;
+    }
+  }
 
 @media(max-width:640px) {
     .ShoppingCart {

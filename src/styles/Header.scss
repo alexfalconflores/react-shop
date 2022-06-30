@@ -1,8 +1,12 @@
 @use 'vars';
 
 nav {
+    background-color: var(--white);
     display: flex;
     justify-content: space-between;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     padding: 0 24px;
     border-bottom: 1px solid var(--very-light-pink);
 }
