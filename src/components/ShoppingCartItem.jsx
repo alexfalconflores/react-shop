@@ -4,11 +4,12 @@ import '@styles/ShoppingCartItem.scss';
 
 import close from '@icons/icon_close.png';
 
-const ShoppingCartItem = ({ product }) => {
+const ShoppingCartItem = ({ product, index }) => {
     const { removeFromCart } = useContext(AppContext);
 
+    //Enviamos el index por ahora.
     const handleRemove = (item) => {
-        removeFromCart(item);
+        removeFromCart(item, index);
     }
 
     return (
